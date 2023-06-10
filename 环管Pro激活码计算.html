@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环管Pro激活码</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+</head>
+
+<script>
+    // 输入框内容清除
+    function clearInput01() {
+        document.getElementById("inputdeviceCode01").value = "";
+    }
+    function clearInput02() {
+        document.getElementById("inputdeviceCode02").value = "";
+    }
+    // 激活码计算
+    function calculateActivation01() {
+        const input01 = document.getElementById("inputdeviceCode01").value;
+        try {
+            // 判断是否为 base64 编码
+            atob(input01);
+        } catch (e) {
+            alert("您输入不是一个有效的设备码");
+            return;
+        }
+        const decoded01 = atob(input01);
+        const utf801 = decodeURIComponent(escape(decoded01));
+        const intValue01 = parseInt(utf801, 10);
+        if (isNaN(intValue01)) {
+            alert("您输入的设备码有误");
+            return;
+        }
+        const result01 = (((intValue01 / 5) + 353962952) / 83 / 9 / 5542 / 83 - 838) / 3;
+        alert('您的激活码为:' + result01);
+    }
+    function calculateActivation02() {
+        const input02 = document.getElementById("inputdeviceCode02").value;
+        try {
+            // 判断是否为 base64 编码
+            atob(input02);
+        } catch (e) {
+            alert("您输入不是一个有效的设备码");
+            return;
+        }
+        const decoded02 = atob(input02);
+        const utf802 = decodeURIComponent(escape(decoded02));
+        const intValue02 = parseInt(utf802, 10);
+        if (isNaN(intValue02)) {
+            alert("您输入的设备码有误");
+            return;
+        }
+        const result02 = (((intValue02 / 7) + 93962945) / 63 / 5 / 685 / 43 - 12) / 58;
+        alert('您的激活码为:' + result02);
+    }
+</script>
+
+<body>
+    <section class="hero is-fullheight is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">环管Pro激活码</h1>
+                <h2 class="subtitle is-3">该网站用于环管Pro激活码计算</h2>
+                <div class="columns is-centered">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="content">
+                                    <p class="heading">环管Pro</p>
+                                    <div class="field has-addons has-addons-centered">
+                                        <div class="control has-icons-left has-icons-right">
+                                            <input class="input is-rounded" id="inputdeviceCode01" type="text"
+                                                placeholder="请输入设备码">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-barcode"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons is-centered">
+                                        <button class="button is-success" onclick="calculateActivation01()">计算</button>
+                                        <button class="button is-danger" onclick="clearInput01()">清空</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="content">
+                                    <p class="heading">腕管Pro</p>
+                                    <div class="field has-addons has-addons-centered">
+                                        <div class="control has-icons-left has-icons-right">
+                                            <input class="input is-rounded" type="text" id="inputdeviceCode02"
+                                                placeholder="请输入设备码">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-barcode"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons is-centered">
+                                        <button class="button is-success" onclick="calculateActivation02()">计算</button>
+                                        <button class="button is-danger" onclick="clearInput02()">清空</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-primary has-text-white-ter">
+        <div class="content has-text-centered">
+            <p class="is-size-4 has-text-white-bis">该网页由 NewBing 生成，赛博丁真进行修改</p>
+        </div>
+    </footer>
+</body>
+
+</html>
